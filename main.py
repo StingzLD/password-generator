@@ -13,24 +13,23 @@ num_symbols = int(input("How many symbols would you like?\n"))
 # Easy Level - Order not randomized:
 #e.g. 4 letter, 2 number, 2 symbol = JduE91&!
 
-password = ""
+password = []
 
 for n in range(0, num_letters):
-    password += letters[random.randint(0, len(letters) - 1)]
+    password.append(letters[random.randint(0, len(letters) - 1)])
 
 for n in range(0, num_numbers):
-    password += numbers[random.randint(0, len(numbers) - 1)]
+    password.append(numbers[random.randint(0, len(numbers) - 1)])
 
 for n in range(0, num_symbols):
-    password += symbols[random.randint(0, len(symbols) - 1)]
+    password.append(symbols[random.randint(0, len(symbols) - 1)])
 
+# password = ''.join(password_list)
 # print(password)
 
 # Hard Level - Order of characters randomized:
 # e.g. 4 letter, 2 number, 2 symbol = g^2jk8&P
 
-password_list = list(password)
-random.shuffle(password_list)
-password = ''.join(password_list)
-
+random.shuffle(password)
+password = ''.join(password)
 print(password)
