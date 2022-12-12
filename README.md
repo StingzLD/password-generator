@@ -1,1 +1,1 @@
-# password-generator
+A CLI tool to generate random passwords
